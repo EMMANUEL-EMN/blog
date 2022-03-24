@@ -1,0 +1,17 @@
+.nav
+{
+    background-color: black;
+    color: white;
+    padding: 3px;
+    /* min-width: 1000px; */
+}
+
+.nav ul
+{
+    list-style-type: none;
+    width: 100%;
+}
+.nav a{
+    color: white;
+    margin: 10px;
+}

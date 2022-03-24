@@ -18,6 +18,15 @@ class Blogs
         return $conn;
     }
 
+    public function validate($data)
+    {
+        $data = htmlentities($data);
+        $data = htmlspecialchars($data);
+        $data = stripslashes($data);
+        $data = trim($data);
+        return $data;
+    }
+
     public function all()
     {
         $sql = "SELECT * FROM `blogs`";
@@ -105,7 +114,3 @@ class Blogs
         return $upload;
     }
 }
-
-
-
-?>
