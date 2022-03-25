@@ -6,7 +6,7 @@ use mysqli;
 
 class Blogs
 {
-    
+
     private $hn = 'localhost';
     private $un = 'root';
     private $pw = '';
@@ -39,7 +39,7 @@ class Blogs
     // all data from form
 
     */
-    public function insert(array $data)
+    public function save(array $data)
     {
         $sql = "INSERT INTO `blogs`(
             `id`,
@@ -63,8 +63,7 @@ class Blogs
             '$data[5]',
             '$data[6]',
             '$data[7]',
-            '$data[8]',
-            '$data[9]'
+            '$data[8]'
         )";
         $runq = $this->db()->query($sql);
         return $runq;
@@ -106,10 +105,10 @@ class Blogs
         return $result;
     }
 
-    public function uploadFile(string $imagename,string $file)
+    public function uploadFile(string $imagename, string $file)
     {
         $dir = "../static/images/";
-        $file_path = $dir.basename($imagename);
+        $file_path = $dir . basename($imagename);
         $upload = move_uploaded_file($file, $file_path);
         return $upload;
     }
