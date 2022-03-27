@@ -34,9 +34,11 @@ class Blogs
         $result = $runq->fetch_all(MYSQLI_ASSOC);
         return $result;
     }
+
     /*
-    /* @param array $data
-    // all data from form
+    * @param array $data
+    
+    *all data from form
 
     */
     public function save(array $data)

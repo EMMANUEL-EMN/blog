@@ -13,6 +13,9 @@
 
 <body>
     <h2>ADD BLOG</h2>
+    <div class="status">
+        <?php require_once '../layouts/status.php'; ?>
+    </div>
     <form action="../../controller/add.php" method="POST" enctype="multipart/form-data">
         <p>Title</p>
         <p>
